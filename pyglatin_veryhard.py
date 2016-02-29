@@ -11,11 +11,13 @@ def translate_word(word):
     else:
         return "{}{}ay".format(word[1:], word[0])
 
+
 def convert(writing):
     new_writing = []
     for word in writing.split():
         new_writing.append(translate_word(word.lower()))
     return " ".join(new_writing)
+
 
 def back_to_english(writing):
     new_writing = []
@@ -26,5 +28,12 @@ def back_to_english(writing):
         else:
             new_writing.append("{}{}".format(word[-3], word[:-3]))
     return " ".join(new_writing)
+
+
+option = input("""
+What do you want to do?
+a)convert English to Pyglatin
+b)convert Pyglatin to English
+""")
 
 
