@@ -3,8 +3,8 @@
 
 
 def translate_word(word):
-    if word[0] in 'aeiou':
-        return word[1:] + 'say'
+    if word[0] in "aeiou":
+        return word[1:] + "say"
     else:
         return "{}{}ay".format(word[1:], word[0])
 
