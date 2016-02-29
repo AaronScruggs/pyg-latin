@@ -12,7 +12,7 @@ def translate_word(word):
         return "{}{}ay".format(word[1:], word[0])
 
 
-def convert(writing):
+def convert_to_pyglatin(writing):
     new_writing = []
     for word in writing.split():
         new_writing.append(translate_word(word.lower()))
@@ -30,10 +30,19 @@ def back_to_english(writing):
     return " ".join(new_writing)
 
 
+writing = input("Please enter some text: ").lower()
+
 option = input("""
 What do you want to do?
 a)convert English to Pyglatin
 b)convert Pyglatin to English
-""")
+""").lower()
+
+if option == 'a':
+    print(convert_to_pyglatin(writing))
+elif option == 'b':
+    print(back_to_english(writing))
+else:
+    print("Not a valid option")
 
 

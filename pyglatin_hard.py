@@ -8,6 +8,7 @@ def translate_word(word):
     else:
         return "{}{}ay".format(word[1:], word[0])
 
+
 def convert(writing):
     new_writing = []
     for word in writing.split():
