@@ -11,11 +11,8 @@ def translate_word(word):
 def convert(writing):
     new_writing = []
     for word in writing.split():
-        if word.isalpha():
-            new_writing.append(translate_word(word))
-        else:
-            new_writing.append(word)
-    return "".join(new_writing)
+        new_writing.append(translate_word(word.lower()))
+    return " ".join(new_writing)
 
 
 writing = input("Please enter some text: ")
