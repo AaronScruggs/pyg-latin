@@ -44,5 +44,3 @@ elif option == 'b':
     print(back_to_english(writing))
 else:
     print("Not a valid option")
-
-
